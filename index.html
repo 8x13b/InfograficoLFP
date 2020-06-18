@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infografico Quarentena 2020</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="title text-center mb-5">
+          <h1>Infografico sobre a quarentena: os pensamentos de adolescentes entre 12 - 15 anos.</h1>
+          <div class="subtitle text-center">
+            <h6>Margem de erro: ~5%</h6>
+          </div>
+        </div>
+        <div class="title text-center mb-5">
+          <h3>Você gostaria de voltar a vida normal?</h3>
+        <canvas id="normalLifeChart" width="800" height="450"></canvas>
+    </div>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <div class="title text-center mb-5">
+        <h3>Você está gostando da quarentena?</h3>
+      <canvas id="likingQuarantine" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Qual você prefere?</h3>
+    <canvas id="whichPrefer" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Como você prefere fazer esportes?</h3>
+    <canvas id="whereSports" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Como você prefere fazer seu trabalho escolar?</h3>
+    <canvas id="schoolWork" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Sobre seus habitos alimentares, você:</h3>
+    <canvas id="foodHabits" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Você aprendeu habilidades/talentos/conhecimentos novos?</h3>
+    <canvas id="skills" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Como você está se sentindo nessa quarentena?</h3>
+    <canvas id="feelingsChart" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <h3>Como você se comunica com seus familiares?</h3>
+    <canvas id="communicationsChart" width="800" height="450"></canvas>
+  </div>
+  </div>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="title text-center mb-5">
+      <div id="icons">
+        <h3>Qual é a sua principal maneira de se divertir?</h3>
+        <img src="assets/controller.svg" alt="Controle de videogame">
+        <img src="assets/tv.svg" alt="Televisão">
+      </div>
+    <canvas id="funChart" width="800" height="450"></canvas>
+  </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <script src="scripts/food-Habits.js"></script>
+    <script src="scripts/liking-quarantine.js"></script>
+    <script src="scripts/mainCommunication.js"></script>
+    <script src="scripts/normal-life.js"></script>
+    <script src="scripts/schoolWork.js"></script>
+    <script src="scripts/skills.js"></script>
+    <script src="scripts/where-sports.js"></script>
+    <script src="scripts/which-prefer.js"></script>
+    <script src="scripts/feelings.js"></script>
+    <script src="scripts/fun.js"></script>
+  </body>
+</html>
+
