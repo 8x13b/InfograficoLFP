@@ -5,7 +5,13 @@
     
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <style>
+      body {
+        background: #2193b0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
   </head>
   <body>
   <div class="wrapper">
@@ -72,8 +78,6 @@
     <div class="title text-center mb-5">
       <div id="icons">
         <h3>Qual é a sua principal maneira de se divertir?</h3>
-        <img src="assets/controller.svg" alt="Controle de videogame">
-        <img src="assets/tv.svg" alt="Televisão">
       </div>
     <canvas id="funChart" width="800" height="450"></canvas>
   </div>
