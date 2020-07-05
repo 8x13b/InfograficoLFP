@@ -1,8 +1,8 @@
-let sWctx = document.getElementById('schoolWork').getContext('2d');
-let sWlabels = ['Não trabalhar','Em casa','Trabalhar fora de casa (Livraria)','Fora de casa de manhã e dentro de tarde']
-let sWcolorHex = ['#3366cc', '#dc3912', '#ff9900', '#109618']
+var sWctx = document.getElementById('schoolWork').getContext('2d');
+var sWlabels = ['Não trabalhar','Em casa','Trabalhar fora de casa (Livraria)','Fora de casa de manhã e dentro de tarde']
+var sWcolorHex = ['#3366cc', '#dc3912', '#ff9900', '#109618']
 
-let schoolWorkChart = new Chart(sWctx, {
+var schoolWorkChart = new Chart(sWctx, {
     type: 'pie',
     data: {
         datasets: [{

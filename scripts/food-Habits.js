@@ -1,8 +1,8 @@
-let fHctx = document.getElementById('foodHabits').getContext('2d');
-let fHlabels = ['Cozinha sua comida','Pede para entregar','Vai a um restaurante']
-let fHcolorHex = ['#008000', '#FFFF00', '#BD353B']
+var fHctx = document.getElementById('foodHabits').getContext('2d');
+var fHlabels = ['Cozinha sua comida','Pede para entregar','Vai a um restaurante']
+var fHcolorHex = ['#008000', '#FFFF00', '#BD353B']
 
-let foodHabitsChart = new Chart(fHctx, {
+var foodHabitsChart = new Chart(fHctx, {
     type: 'pie',
     data: {
         datasets: [{

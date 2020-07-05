@@ -1,8 +1,8 @@
-let sctx = document.getElementById('skills').getContext('2d');
-let slabels = ['Sim','Não']
-let scolorHex = ['#008000', '#BD353B']
+var sctx = document.getElementById('skills').getContext('2d');
+var slabels = ['Sim','Não']
+var scolorHex = ['#008000', '#BD353B']
 
-let sChart = new Chart(sctx, {
+var sChart = new Chart(sctx, {
     type: 'pie',
     data: {
         datasets: [{

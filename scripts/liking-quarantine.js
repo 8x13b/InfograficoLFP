@@ -1,8 +1,8 @@
-let lQctx = document.getElementById('likingQuarantine').getContext('2d');
-let lQlabels = ['Sim','Não']
-let lQcolorHex = ['#008000', '#BD353B']
+var lQctx = document.getElementById('likingQuarantine').getContext('2d');
+var lQlabels = ['Sim','Não']
+var lQcolorHex = ['#008000', '#BD353B']
 
-let lQChart = new Chart(lQctx, {
+var lQChart = new Chart(lQctx, {
     type: 'pie',
     data: {
         datasets: [{

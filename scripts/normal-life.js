@@ -1,8 +1,8 @@
-let ctx = document.getElementById('normalLifeChart').getContext('2d');
-let labels = ['Sim','Talvez','Não']
-let colorHex = ['#008000', '#FFFF00', '#BD353B']
+var ctx = document.getElementById('normalLifeChart').getContext('2d');
+var labels = ['Sim','Talvez','Não']
+var colorHex = ['#008000', '#FFFF00', '#BD353B']
 
-let normalLifeChart = new Chart(ctx, {
+var normalLifeChart = new Chart(ctx, {
     type: 'pie',
     data: {
         datasets: [{

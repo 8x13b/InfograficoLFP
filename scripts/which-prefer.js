@@ -1,8 +1,8 @@
-let wPctx = document.getElementById('whichPrefer').getContext('2d');
-let wPlabels = ['Netflix','Videogames','Ler','Estudar']
-let wPcolorHex = ['#3366cc', '#dc3912', '#ff9900', '#109618']
+var wPctx = document.getElementById('whichPrefer').getContext('2d');
+var wPlabels = ['Netflix','Videogames','Ler','Estudar']
+var wPcolorHex = ['#3366cc', '#dc3912', '#ff9900', '#109618']
 
-let whichPreferChart = new Chart(wPctx, {
+var whichPreferChart = new Chart(wPctx, {
     type: 'pie',
     data: {
         datasets: [{
