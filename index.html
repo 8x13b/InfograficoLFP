@@ -1,89 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Infografico Quarentena 2020</title>
-    
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <style>
-      body {
-        background: #2193b0;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      }
-    </style>
-  </head>
-  <body>
-  <div class="wrapper">
-    <div class="container d-flex flex-column justify-content-center align-items-center">
-        <div class="title text-center mb-5">
-          <h1>Infografico sobre a quarentena: os pensamentos de adolescentes entre 12 - 15 anos.</h1>
-          <div class="subtitle text-center">
-            <h6>Margem de erro: ~5%</h6>
+   <head>
+      <title>Infografico Quarentena 2020</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="styles/style.css">
+      <link rel="stylesheet" href="styles/iconmonstr-iconic-font.min.css">
+      <style>
+         body {
+         background: #2193b0;  /* fallback for old browsers */
+         background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+         background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         }
+      </style>
+   </head>
+   <body onscroll="scroll()">
+      <div class="container-fluid">
+        <h1 class="title">Infografico sobre a quarentena: os pensamentos de adolescentes entre 12 - 15 anos.</h1>
+        <h6 class="subtitle">Margem de erro: ~5%</h6>
+      </div>
+      <div class="charts">
+
+        <div class="container">
+          <div class="chart">
+            <h3>Você gostaria de voltar a vida normal?</h3>
+            <canvas id="normalLifeChart" width="800" height="450"></canvas>
+          </div>
+          <img width="100%" height="225px" src="assets/heart.svg" alt="Coracao">
+          <div class="chart">
+            <h3>Você está gostando da quarentena?</h3>
+            <canvas id="likingQuarantine" width="800" height="450"></canvas>
           </div>
         </div>
-        <div class="title text-center mb-5">
-          <h3>Você gostaria de voltar a vida normal?</h3>
-        <canvas id="normalLifeChart" width="800" height="450"></canvas>
-    </div>
-    <div class="container d-flex flex-column justify-content-center align-items-center">
-      <div class="title text-center mb-5">
-        <h3>Você está gostando da quarentena?</h3>
-      <canvas id="likingQuarantine" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Qual você prefere?</h3>
-    <canvas id="whichPrefer" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Como você prefere fazer esportes?</h3>
-    <canvas id="whereSports" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Como você prefere fazer seu trabalho escolar?</h3>
-    <canvas id="schoolWork" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Sobre seus habitos alimentares, você:</h3>
-    <canvas id="foodHabits" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Você aprendeu habilidades/talentos/conhecimentos novos?</h3>
-    <canvas id="skills" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Como você está se sentindo nessa quarentena?</h3>
-    <canvas id="feelingsChart" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <h3>Como você se comunica com seus familiares?</h3>
-    <canvas id="communicationsChart" width="800" height="450"></canvas>
-  </div>
-  </div>
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="title text-center mb-5">
-      <div id="icons">
-        <h3>Qual é a sua principal maneira de se divertir?</h3>
+        <div class="container">
+          <div class="chart">
+            <h3>Qual você prefere?</h3>
+            <canvas id="whichPrefer" width="800" height="450"></canvas>
+          </div>
+          <img src="assets/iconmonstr-star-5.svg" alt="estrela" class="big-icon">
+          <div class="chart">
+            <h3>Como você prefere fazer esportes?</h3>
+            <canvas id="whereSports" width="800" height="450"></canvas>
+          </div>
+        </div>
+        <div class="container">
+          <div class="chart">
+            <h3>Como você prefere fazer seu trabalho escolar?</h3>
+            <canvas id="schoolWork" width="800" height="450"></canvas>
+          </div>
+          <img alt="Professor apontando a uma lousa com 2 alunos olhando" width="225px" height="225px" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMiAyMWMuNTMgMCAxLjAzOS4yMTEgMS40MTQuNTg2LjM3Ni4zNzUuNTg2Ljg4NC41ODYgMS40MTR2MWgtNnYtMWMwLTEuMTA0Ljg5Ni0yIDItMmgyem0tNyAwYy41MyAwIDEuMDM5LjIxMSAxLjQxNC41ODYuMzc2LjM3NS41ODYuODg0LjU4NiAxLjQxNHYxaC02di0xYzAtMS4xMDQuODk2LTIgMi0yaDJ6bTcgMWgtMmMtLjU1MSAwLTEgLjQ0OC0xIDFoNGMwLS41NjQtLjQ2MS0xLTEtMXptLTcgMGgtMmMtLjU1MSAwLTEgLjQ0OC0xIDFoNGMwLS41NjQtLjQ2MS0xLTEtMXptLTYuNzU4LTEuMjE2Yy0uMDI1LjY3OS0uNTc2IDEuMjEtMS4yNTYgMS4yMS0uNjQgMC0xLjE3OS0uNDk3LTEuMjU0LTEuMTU2bC0uNDA2LTQuMDM0LS4zMTcgNC4wMTljLS4wNTEuNjU2LS42MDQgMS4xNzEtMS4yNTcgMS4xNzEtLjY4MSAwLTEuMjM1LS41MzEtMS4yNjItMS4yMWwtLjI2Mi02LjQ1Ni0uMzA4LjU1NWMtLjI0MS40MzctLjguNjM4LTEuMjY1LjQ1OS0uNDA0LS4xNTYtLjY1NS0uNTM4LS42NTUtLjk1MSAwLS4wOTMuMDEyLS4xODguMDM5LS4yODNsMS4xMzQtNC4wOThjLjE3LS42MDEuNzI1LTEuMDIxIDEuMzUxLTEuMDIxaDQuMDk2Yy41MTEgMCAxLjAxMi0uMTc4IDEuMjg1LS4zMy43MjMtLjQwMyAyLjQzOS0xLjM2OSAzLjEzNi0xLjc5My4zOTQtLjI0My45NDktLjE0NyAxLjI0LjIxNy4zMi4zOTYuMjg2Ljk1LS4wNzQgMS4yOTdsLTMuMDQ4IDIuOTA2Yy0uMzc1LjM1OS0uNTk1Ljg0OS0uNjE3IDEuMzgxLS4wNjEgMS4zOTctLjMgOC4xMTctLjMgOC4xMTd6bS01LjcxOC0xMC43OTVjLS4xOCAwLS4zNC4xMjEtLjM4OS4yOTQtLjI5NSAxLjA0LTEuMDExIDMuNjY2LTEuMTM0IDQuMDk4bDEuNTExLTIuNTkzYy4xNzItLjI5NS42MjMtLjE4LjYzNi4xNThsLjM0MSA4Ljc5N2MuMDEuMjc4LjUuMjg3LjUyMy4wMDIgMCAwIC4yNjktMy4zNS4zMDgtMy45NDQuMDQxLS41OTkuNDQ5LTEuMDE3Ljk5Mi0xLjAxNy41NDcuMDAyLjk2OC40MTUgMS4wMjkgMS4wMDQuMDM2LjM0OS4zMjcgMy40MTkuMzg1IDMuOTM4LjA0My4zNzguNTA1LjMyNi41MTcuMDIyIDAgMCAuMjM5LTYuNzI1LjMtOC4xMjQuMDMzLS43OTEuMzYyLTEuNTIzLjkyNS0yLjA2MWwzLjA0NS0yLjkwNGMtLjY2MS40OTItMi4zOTMgMS40NjgtMy4xMjEgMS44NzMtLjM5Ni4yMjEtMS4wNy40NTctMS43NzIuNDU3aC00LjA5NnptMTguNDc2IDYuMDExYy0xLjMwNSAwLTIuMzY0IDEuMDYtMi4zNjQgMi4zNjQgMCAxLjMwNSAxLjA1OSAyLjM2NSAyLjM2NCAyLjM2NXMyLjM2NC0xLjA2IDIuMzY0LTIuMzY1YzAtMS4zMDQtMS4wNTktMi4zNjQtMi4zNjQtMi4zNjR6bS03IDBjLTEuMzA1IDAtMi4zNjQgMS4wNi0yLjM2NCAyLjM2NCAwIDEuMzA1IDEuMDU5IDIuMzY1IDIuMzY0IDIuMzY1czIuMzY0LTEuMDYgMi4zNjQtMi4zNjVjMC0xLjMwNC0xLjA1OS0yLjM2NC0yLjM2NC0yLjM2NHptNyAxYy43NTIgMCAxLjM2NC42MTIgMS4zNjQgMS4zNjQgMCAuNzUzLS42MTIgMS4zNjUtMS4zNjQgMS4zNjUtLjc1MiAwLTEuMzY0LS42MTItMS4zNjQtMS4zNjUgMC0uNzUyLjYxMi0xLjM2NCAxLjM2NC0xLjM2NHptLTcgMGMuNzUyIDAgMS4zNjQuNjEyIDEuMzY0IDEuMzY0IDAgLjc1My0uNjEyIDEuMzY1LTEuMzY0IDEuMzY1LS43NTIgMC0xLjM2NC0uNjEyLTEuMzY0LTEuMzY1IDAtLjc1Mi42MTItMS4zNjQgMS4zNjQtMS4zNjR6bTEwLTJoLTE0LjY1OHYtMWg3LjY1OHYtMWgzdjFoM3YtMTNoLTIydjdsLTEgM3YtMTFoMjR2MTV6bS02LTZoLTR2LTFoNHYxem0tMTIuNzI3LTVjLTEuMjc4IDAtMi4zMTUgMS4wMzgtMi4zMTUgMi4zMTYgMCAxLjI3OCAxLjAzNyAyLjMxNiAyLjMxNSAyLjMxNnMyLjMxNi0xLjAzOCAyLjMxNi0yLjMxNmMwLTEuMjc4LTEuMDM4LTIuMzE2LTIuMzE2LTIuMzE2em0wIDFjLjcyNiAwIDEuMzE2LjU5IDEuMzE2IDEuMzE2IDAgLjcyNi0uNTkgMS4zMTYtMS4zMTYgMS4zMTYtLjcyNSAwLTEuMzE1LS41OS0xLjMxNS0xLjMxNiAwLS43MjYuNTktMS4zMTYgMS4zMTUtMS4zMTZ6bTE1LjcyNyAyaC03di0xaDd2MXptMC0yaC03di0xaDd2MXoiLz48L3N2Zz4=">
+          <div class="chart">
+            <h3>Sobre seus habitos alimentares, você:</h3>
+            <canvas id="foodHabits" width="800" height="450"></canvas>
+          </div>
+        </div>
+        <div class="container">
+          <div class="chart">
+            <h3>Você aprendeu habilidades/talentos/conhecimentos novos?</h3>
+            <canvas id="skills" width="800" height="450"></canvas>
+          </div>
+          <img width="225px" height="225px" src="assets/hammer-with-point-outline-side-view.svg" alt="">
+          <div class="chart">
+            <h3>Como você está se sentindo nessa quarentena?</h3>
+            <canvas id="feelingsChart" width="800" height="450"></canvas>
+          </div>
+        </div>
+        <div class="container">
+          <div class="chart">
+            <h3>Como você se comunica com seus familiares?</h3>
+            <canvas id="communicationsChart" width="800" height="450"></canvas>
+          </div>
+          <img width="225px" height="225px" src="assets/iconmonstr-gamepad-4.svg" alt="Controle de videogame">
+          <div class="chart">
+            <h3>Qual é a sua principal maneira de se divertir?</h3>
+            <canvas id="funChart" width="800" height="450"></canvas>
+          </div>
+        </div>
+
       </div>
-    <canvas id="funChart" width="800" height="450"></canvas>
-  </div>
-  </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+      Certos icones foram feitos por https://www.flaticon.com/authors/freepik e puxados pelo https://www.flaticon.com/
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+      <!-- <script src="scripts/all.min.js"></script> -->
+      <script src="scripts/feelings.js"></script>
+      <script src="scripts/food-Habits.js"></script>
+      <script src="scripts/fun.js"></script>
+      <script src="scripts/liking-quarantine.js"></script>
+      <script src="scripts/mainCommunication.js"></script>
+      <script src="scripts/normal-life.js"></script>
+      <script src="scripts/schoolWork.js"></script>
+      <script src="scripts/skills.js"></script>
+      <script src="scripts/where-sports.js"></script>
+      <script src="scripts/which-prefer.js"></script>
 
-    <script src="scripts/all.min.js"></script>
-  </body>
+      <!-- Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+      <!-- Smooth Scroll -->
+      <script src="scripts/smoothScroll.js"></script>
+
+      <!-- Force canvas width -->
+      <link rel="stylesheet" href="styles/force-width.css">
+   </body>
 </html>
-

@@ -13,6 +13,7 @@ var whichPreferChart = new Chart(wPctx, {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: true,
         legend: {
             position: 'bottom'
         }
